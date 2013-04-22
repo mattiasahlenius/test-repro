@@ -23,7 +23,7 @@ namespace FantasticConsoleApp
                     }
                 });
 
-            while (Console.ReadKey().KeyChar != 'q') ;
+            while (!(Console.ReadKey().KeyChar == 'q' || Console.ReadKey().KeyChar == 'w')) ;
 
 
         }
