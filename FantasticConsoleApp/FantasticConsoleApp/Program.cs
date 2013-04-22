@@ -10,6 +10,22 @@ namespace FantasticConsoleApp
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("Press q to quit... ");
+
+            Task.Factory.StartNew(
+                () =>
+                {
+                    while (true)
+                    {
+                        Console.WriteLine(DateTime.Now);
+                        Task.Delay(1000).Wait();
+                    }
+                });
+
+            while (Console.ReadKey().KeyChar != 'q') ;
+
+
         }
     }
 }
